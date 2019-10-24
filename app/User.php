@@ -39,12 +39,22 @@ class User extends Authenticatable implements HasMedia
         'email_verified_at',
     ];
 
+    const SALUTATION_SELECT = [
+        'Ms'   => 'Ms',
+        'Mrs'  => 'Mrs',
+        'Mr'   => 'Mr',
+        'Dr'   => 'Dr',
+        'Prof' => 'Prof',
+        'Miss' => 'Miss',
+    ];
+
     protected $fillable = [
         'name',
         'phone',
         'email',
         'verified',
         'password',
+        'salutation',
         'created_at',
         'updated_at',
         'deleted_at',

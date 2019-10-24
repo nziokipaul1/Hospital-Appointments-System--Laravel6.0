@@ -75,6 +75,8 @@ return [
             'verified_at_helper'        => '',
             'verification_token'        => 'Verification token',
             'verification_token_helper' => '',
+            'salutation'                => 'Salutation',
+            'salutation_helper'         => '',
         ],
     ],
     'hospital'       => [

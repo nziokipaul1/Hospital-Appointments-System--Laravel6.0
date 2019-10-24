@@ -36,6 +36,14 @@
                     </tr>
                     <tr>
                         <th>
+                            {{ trans('cruds.user.fields.salutation') }}
+                        </th>
+                        <td>
+                            {{ App\User::SALUTATION_SELECT[$user->salutation] ?? '' }}
+                        </td>
+                    </tr>
+                    <tr>
+                        <th>
                             {{ trans('cruds.user.fields.phone') }}
                         </th>
                         <td>

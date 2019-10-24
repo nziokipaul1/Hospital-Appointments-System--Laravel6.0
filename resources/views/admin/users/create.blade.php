@@ -33,6 +33,20 @@
                     {{ trans('cruds.user.fields.other_names_helper') }}
                 </p>
             </div>
+            <div class="form-group {{ $errors->has('salutation') ? 'has-error' : '' }}">
+                <label for="salutation">{{ trans('cruds.user.fields.salutation') }}</label>
+                <select id="salutation" name="salutation" class="form-control">
+                    <option value="" disabled>{{ trans('global.pleaseSelect') }}</option>
+                    @foreach(App\User::SALUTATION_SELECT as $key => $label)
+                        <option value="{{ $key }}" {{ old('salutation', 'Mr') === (string)$key ? 'selected' : '' }}>{{ $label }}</option>
+                    @endforeach
+                </select>
+                @if($errors->has('salutation'))
+                    <p class="help-block">
+                        {{ $errors->first('salutation') }}
+                    </p>
+                @endif
+            </div>
             <div class="form-group {{ $errors->has('phone') ? 'has-error' : '' }}">
                 <label for="phone">{{ trans('cruds.user.fields.phone') }}*</label>
                 <input type="text" id="phone" name="phone" class="form-control" value="{{ old('phone', isset($user) ? $user->phone : '') }}" required>
