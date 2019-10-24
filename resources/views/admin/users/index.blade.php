@@ -32,6 +32,9 @@
                             {{ trans('cruds.user.fields.other_names') }}
                         </th>
                         <th>
+                            {{ trans('cruds.user.fields.salutation') }}
+                        </th>
+                        <th>
                             {{ trans('cruds.user.fields.phone') }}
                         </th>
                         <th>
@@ -39,6 +42,9 @@
                         </th>
                         <th>
                             {{ trans('cruds.user.fields.verified') }}
+                        </th>
+                        <th>
+                            {{ trans('cruds.user.fields.verified_at') }}
                         </th>
                         <th>
                             {{ trans('cruds.user.fields.profile_photo') }}
@@ -70,6 +76,9 @@
                                 {{ $user->other_names ?? '' }}
                             </td>
                             <td>
+                                {{ App\User::SALUTATION_SELECT[$user->salutation] ?? '' }}
+                            </td>
+                            <td>
                                 {{ $user->phone ?? '' }}
                             </td>
                             <td>
@@ -77,6 +86,9 @@
                             </td>
                             <td>
                                 {{ $user->verified ? trans('global.yes') : trans('global.no') }}
+                            </td>
+                            <td>
+                                {{ $user->verified_at ?? '' }}
                             </td>
                             <td>
                                 @if($user->profile_photo)
