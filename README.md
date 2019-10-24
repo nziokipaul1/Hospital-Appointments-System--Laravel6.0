@@ -1,5 +1,14 @@
 # Hospital-Appointments-System--Laravel6.0
 Hospital Appointments System -Laravel6.0
+-----------------------------------------------------------------------
+FEATURES:
+1. Users registration
+2. Database-based User Roles and permissions
+3. hOSPITAL (+plus branches, health services offereable, doctors) rEGISTRATION
+4. Appointments management -creation, edits, view, deletion
+5. Inbuilt email service
+6. Dashboard with cues, graphs
+-----------------------------------------------------------------------
 
 ------------------------------------------------------------------------
 INSTALLATION INSTRUCTIONS
